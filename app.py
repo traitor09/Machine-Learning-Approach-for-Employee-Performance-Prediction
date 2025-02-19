@@ -3,7 +3,6 @@ import numpy as np
 import pickle
 
 app = Flask(__name__)
-
 try:
     model = pickle.load(open('best_model.pkl', 'rb'))
 except Exception as e:
@@ -12,22 +11,22 @@ except Exception as e:
 
 
 @app.route("/")
-def about():
+def home():
     return render_template('home.html')
 
 
 @app.route("/about")
-def home():
+def about():
     return render_template('about.html')
 
 
 @app.route("/predict")
-def home1():
+def predict_page():
     return render_template('predict.html')
 
 
 @app.route("/submit")
-def home2():
+def submit_page():
     return render_template('submit.html')
 
 
