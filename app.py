@@ -30,6 +30,18 @@ def submit_page():
     return render_template('submit.html')
 
 
+@app.route("/dashboard")
+def dashboard():
+    # Example data, replace with actual data fetching logic
+    performance_data = {
+        'average_productivity': 0.75,
+        'highly_productive_count': 10,
+        'medium_productive_count': 20,
+        'average_productive_count': 5
+    }
+    return render_template('dashboard.html', data=performance_data)
+
+
 @app.route("/pred", methods=['POST'])
 def predict():
     if model is None:

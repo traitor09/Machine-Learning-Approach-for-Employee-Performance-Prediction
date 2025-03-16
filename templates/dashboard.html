@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block title %}Performance Dashboard{% endblock %}
+
+{% block content %}
+<header>
+    <h1 class="text-center">Performance Dashboard</h1>
+</header>
+<p class="text-center">Here you can view various performance metrics and insights.</p>
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Average Productivity</h5>
+                    <p class="card-text">{{ data.average_productivity }}</p>
+                    <p class="card-text">This metric represents the average productivity score of all employees, providing an overall view of performance levels within the organization.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Highly Productive Employees</h5>
+                    <p class="card-text">{{ data.highly_productive_count }}</p>
+                    <p class="card-text">This count shows the number of employees who are classified as highly productive, helping identify top performers.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Medium Productive Employees</h5>
+                    <p class="card-text">{{ data.medium_productive_count }}</p>
+                    <p class="card-text">This metric indicates the number of employees with medium productivity, which can help in identifying areas for improvement.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mt-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Average Productive Employees</h5>
+                    <p class="card-text">{{ data.average_productive_count }}</p>
+                    <p class="card-text">This count shows the number of employees who are performing at an average level, highlighting those who may need additional support or training.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
